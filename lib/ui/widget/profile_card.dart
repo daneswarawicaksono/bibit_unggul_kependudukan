@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:kependudukan/theme/palette.dart';
 
 class ProfileCard extends StatelessWidget {
   const ProfileCard({Key? key}) : super(key: key);
@@ -10,91 +10,54 @@ class ProfileCard extends StatelessWidget {
       children: [
         Container(
           padding: const EdgeInsets.all(8.0),
-          color: Color(0xFF77529C),
+          color: Theme.of(context).colorScheme.primary,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CircleAvatar(
-                backgroundImage: AssetImage('asset/18.jpg'),
-                radius: 50,
+                backgroundColor: Theme.of(context).colorScheme.primary,
+                backgroundImage: const AssetImage('asset/18.jpg'),
+                radius: 25,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 15,
               ),
               Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Nama Orang',
-                      style: GoogleFonts.inter(
-                        textStyle:
-                            TextStyle(color: Colors.white, letterSpacing: .5),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 25, bottom: 25),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Nama Orang',
+                        style: Theme.of(context)
+                            .textTheme
+                            .subtitle1!
+                            .copyWith(color: Palette.onPrimary),
                       ),
-                    ),
-                    SizedBox(
-                      height: 12,
-                    ),
-                    Text(
-                      'Ketua RT',
-                      style: GoogleFonts.inter(
-                        textStyle:
-                            TextStyle(color: Colors.white, letterSpacing: .5),
+                      const SizedBox(
+                        height: 5,
                       ),
-                    ),
-                  ],
+                      Text(
+                        'Ketua RW',
+                        style: Theme.of(context)
+                            .textTheme
+                            .subtitle1!
+                            .copyWith(color: Palette.onPrimary),
+                      )
+                    ],
+                  ),
                 ),
               ),
               const Icon(
                 Icons.settings,
                 color: Colors.white,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 27,
               )
             ],
           ),
-        ),
-        Container(
-          padding: const EdgeInsets.all(8.0),
-          color: Color(0xFF5B397D),
-          child: Row(
-            children: [
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Center(
-                      child: Text(
-                        'Jl. Madubronto RW 05, Kel. Patangpuluhan, Kec. Wirobrajan, Kota Yogyakarta - DI Yogyakarta',
-                        style: GoogleFonts.inter(
-                          textStyle:
-                              TextStyle(color: Colors.white, letterSpacing: .5),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-        SizedBox(
-          height: 30,
-        ),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              width: 18,
-            ),
-            Text(
-              'Menu Utama',
-              style: GoogleFonts.inter(
-                textStyle: TextStyle(color: Colors.black, letterSpacing: .5),
-              ),
-            ),
-          ],
         ),
       ],
     );
