@@ -16,25 +16,23 @@ class MenuCard extends StatelessWidget {
               CircleAvatar(
                 radius: 24,
                 backgroundColor: Palette.kesehatanColor.withOpacity(0.2),
-                child: Icon(
+                child: const Icon(
                   Icons.add_box,
                   color: Palette.kesehatanColor,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               Text(
                 'Kesehatan',
-                style: Theme.of(context)
-                    .textTheme
-                    .subtitle1!
-                    .copyWith(color: Palette.onBackground),
+                style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                    color: Theme.of(context).colorScheme.onBackground),
               ),
             ],
           ),
         )),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         Card(
             child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -43,22 +41,20 @@ class MenuCard extends StatelessWidget {
               CircleAvatar(
                 radius: 24,
                 backgroundColor: Palette.kesejahteraanColor.withOpacity(0.2),
-                child: Icon(
+                child: const Icon(
                   Icons.person,
                   color: Palette.kesejahteraanColor,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               Text(
                 'Kesejahteraan',
-                style: Theme.of(context)
-                    .textTheme
-                    .subtitle1!
-                    .copyWith(color: Palette.onBackground),
+                style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                    color: Theme.of(context).colorScheme.onBackground),
               ),
-              SizedBox(height: 10)
+              const SizedBox(height: 10)
             ],
           ),
         )),

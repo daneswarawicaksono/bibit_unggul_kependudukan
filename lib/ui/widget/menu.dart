@@ -21,12 +21,12 @@ class Menu extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .subtitle1!
-                  .copyWith(color: Palette.onBackground),
+                  .copyWith(color: Theme.of(context).colorScheme.onBackground),
             ),
             const SizedBox(
               height: 14,
             ),
-            MenuCard(),
+            const MenuCard(),
           ],
         ),
       ),

@@ -11,7 +11,7 @@ class BerandaPage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: ListView(
-          children: [
+          children: const [
             // TODO Buat Tampilan Untuk Profile
             ProfileCard(),
 
