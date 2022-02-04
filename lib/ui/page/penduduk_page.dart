@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kependudukan/theme/palette.dart';
+import 'package:kependudukan/ui/widget/list_card.dart';
 
 class PendudukPage extends StatelessWidget {
   const PendudukPage({Key? key}) : super(key: key);
@@ -40,43 +41,14 @@ class PendudukPage extends StatelessWidget {
                   .copyWith(color: Theme.of(context).colorScheme.onBackground),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(
-                top: 5.0, bottom: 5.0, left: 20, right: 20),
-            child: Card(
-                child: Padding(
-              padding: const EdgeInsets.only(
-                  top: 10.0, bottom: 10.0, left: 20, right: 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Nama Penduduk',
-                    style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                        color: Theme.of(context).colorScheme.onBackground),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
-                    child: Divider(
-                      color: Color(0xFFF0F0F0),
-                    ),
-                  ),
-                  Text(
-                    'Usia            : 23 Abad',
-                    style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                          color: Color(0xFFF0F0F0),
-                        ),
-                  ),
-                  Text(
-                    'Pekerjaan  : Desainer',
-                    style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                          color: Color(0xFFF0F0F0),
-                        ),
-                  ),
-                ],
-              ),
-            )),
-          ),
+          ListView.builder(
+            itemBuilder: (context, index) {
+              return ListCard();
+            },
+            itemCount: 50,
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+          )
         ],
       ),
     );
