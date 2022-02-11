@@ -17,7 +17,7 @@ class ListCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Sukma Disnat',
+                'X',
                 style: Theme.of(context).textTheme.subtitle1!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground),
               ),
@@ -28,7 +28,7 @@ class ListCard extends StatelessWidget {
                 ),
               ),
               Text(
-                'Usia            : 23 Abad',
+                'Usia            : X',
                 style: Theme.of(context).textTheme.subtitle1!.copyWith(
                       color: Color(0xFFF0F0F0),
                     ),

@@ -51,6 +51,14 @@ class PendudukPage extends StatelessWidget {
           )
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(
+          Icons.add,
+          color: Palette.primaryVariant,
+        ),
+        backgroundColor: Palette.onPrimary,
+      ),
     );
   }
 }
